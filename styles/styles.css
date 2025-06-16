@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&family=SF+Pro+Text:wght@300;400;500;600&display=swap');
+
+/* Tailwind CSS via CDN */
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
+
+/* Apple-inspired light mode color scheme */
+:root {
+    --apple-white: #ffffff;
+    --apple-gray-50: #f9f9f9;
+    --apple-gray-100: #f2f2f7;
+    --apple-gray-200: #e5e5ea;
+    --apple-gray-300: #d1d1d6;
+    --apple-gray-400: #c7c7cc;
+    --apple-gray-500: #aeaeb2;
+    --apple-gray-600: #8e8e93;
+    --apple-gray-700: #636366;
+    --apple-gray-800: #48484a;
+    --apple-gray-900: #1c1c1e;
+    --apple-teal: #0d9488;
+    --apple-teal-light: #14b8a6;
+    --apple-teal-dark: #0f766e;
+}
+
+/* Custom styles */
+body {
+    font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: linear-gradient(135deg, var(--apple-gray-50) 0%, var(--apple-gray-100) 100%);
+    min-height: 100vh;
+    color: var(--apple-gray-900);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid var(--apple-gray-200);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.glass-input {
+    background: var(--apple-white);
+    border: 1.5px solid var(--apple-gray-300);
+    color: var(--apple-gray-900);
+    font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+    transition: all 0.2s ease;
+}
+
+.glass-input::placeholder {
+    color: var(--apple-gray-500);
+}
+
+.glass-input:focus {
+    background: var(--apple-white);
+    outline: none;
+    border-color: var(--apple-teal);
+    box-shadow: 0 0 0 3px rgba(13, 148, 136, 0.1);
+}
+
+.glass-input:hover {
+    border-color: var(--apple-gray-400);
+}
+
+.glass-button {
+    background: var(--apple-teal);
+    border: none;
+    color: white;
+    font-weight: 500;
+    font-family: 'SF Pro Text', -apple-system, BlinkMacSystemFont, sans-serif;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(13, 148, 136, 0.2);
+}
+
+.glass-button:hover {
+    background: var(--apple-teal-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(13, 148, 136, 0.3);
+}
+
+.glass-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(13, 148, 136, 0.2);
+}
+
+.section-card {
+    background: var(--apple-white);
+    border: 1px solid var(--apple-gray-200);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.section-card:hover {
+    background: var(--apple-white);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border-color: var(--apple-gray-300);
+}
+
+.nav-link {
+    color: var(--apple-teal);
+    text-decoration: none;
+    padding: 0.75rem 1.5rem;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+    background: var(--apple-white);
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    background: var(--apple-gray-50);
+    border-color: var(--apple-gray-200);
+    color: var(--apple-teal-dark);
+}
+
+.success-message {
+    background: var(--apple-teal);
+    color: white;
+    padding: 1rem 1.5rem;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(13, 148, 136, 0.2);
+}
+
+.error-message {
+    background: var(--apple-gray-600);
+    color: white;
+    padding: 1rem 1.5rem;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(142, 142, 147, 0.2);
+}
+
+.warning-message {
+    background: var(--apple-gray-700);
+    color: white;
+    padding: 1rem 1.5rem;
+    font-weight: 500;
+    box-shadow: 0 2px 8px rgba(99, 99, 102, 0.2);
+}
+
+/* Apple-style section headers */
+.section-header {
+    color: var(--apple-gray-600);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+/* Icon colors - only teal */
+.icon-teal { color: var(--apple-teal); }
+
+/* Typography improvements */
+h1, h2, h3 {
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 600;
+    color: var(--apple-gray-900);
+}
+
+.text-secondary {
+    color: var(--apple-gray-600);
+}
+
+.text-tertiary {
+    color: var(--apple-gray-500);
+}
+
+/* Apple-style dividers */
+.apple-divider {
+    height: 1px;
+    background: var(--apple-gray-200);
+    border: none;
+    margin: 2rem 0;
+}
+
+/* Form improvements */
+select.glass-input {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23aeaeb2' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.75rem center;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    padding-right: 2.5rem;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .glass-card {
+        margin: 1rem;
+    }
+}

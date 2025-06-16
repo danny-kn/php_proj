@@ -1,0 +1,49 @@
+-- CREATE EMPLOYEE TABLE...
+CREATE TABLE IF NOT EXISTS EMPLOYEE (
+	Fname VARCHAR(15) NOT NULL,
+	Minit VARCHAR(1),
+	Lname VARCHAR(15) NOT NULL,
+	Ssn CHAR(9) PRIMARY KEY,
+	Bdate DATE,
+	Address VARCHAR(50),
+	Sex CHAR,
+	Salary DECIMAL(10, 2),
+	Super_ssn CHAR(9),
+	Dno INT NOT NULL ) engine = innodb;
+
+-- CREATE DEPARTMENT TABLE...
+CREATE TABLE IF NOT EXISTS DEPARTMENT (
+	Dname VARCHAR(15) NOT NULL,
+	Dnumber INT PRIMARY KEY,
+	Mgr_ssn CHAR(9) NOT NULL,
+	Mgr_start_date DATE ) engine = innodb;
+
+-- CREATE DEPT_LOCATIONS TABLE...
+CREATE TABLE IF NOT EXISTS DEPT_LOCATIONS (
+	Dnumber INT NOT NULL,
+	Dlocation VARCHAR(15) NOT NULL,
+	PRIMARY KEY (Dnumber, Dlocation) ) engine = innodb;
+
+-- CREATE PROJECT TABLE...
+CREATE TABLE IF NOT EXISTS PROJECT (
+	Pname VARCHAR(20) NOT NULL,
+	Pnumber INT NOT NULL,
+	Plocation VARCHAR(15),
+	Dnum INT NOT NULL,
+	PRIMARY KEY (Pnumber) ) engine = innodb;
+
+-- CREATE WORKS_ON TABLE...
+CREATE TABLE IF NOT EXISTS WORKS_ON (
+	Essn CHAR(9) NOT NULL,
+	Pno INT NOT NULL,
+	Hours DECIMAL(4, 2) NOT NULL,
+	PRIMARY KEY (Essn, Pno) ) engine = innodb;
+
+-- CREATE DEPENDENT TABLE...
+CREATE TABLE IF NOT EXISTS DEPENDENT (
+	Essn CHAR(9) NOT NULL,
+	Dependent_name VARCHAR(15) NOT NULL,
+	Sex CHAR,
+	Bdate DATE,
+	Relationship VARCHAR(8),
+	PRIMARY KEY (Essn, Dependent_name) ) engine = innodb;
