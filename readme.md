@@ -33,7 +33,16 @@ The application uses a MySQL database with the following tables:
 
 ### Application Interface
 ![Main Dashboard](img/new/img_01.png)
+*The main page of the application.*
+
 ![Employee Management](img/new/img_02.png)
+*Insert new employee functionality.*
+
 ![Department Management](img/new/img_03.png)
+*Remove employee functionality.*
+
 ![Project Assignment](img/new/img_04.png)
+*Insert new department functionality.*
+
 ![Form Interface](img/new/img_05.png)
+*Assign project to employee functionality.*
